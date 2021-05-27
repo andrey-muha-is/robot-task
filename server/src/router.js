@@ -14,7 +14,7 @@ module.exports = function (datasource) {
 
   router.post(
     "/init/:fileName",
-    koaBody({ multipart: true }),
+    koaBody(),
     saveMapMiddleware,
     initMapHandler(datasource)
   );

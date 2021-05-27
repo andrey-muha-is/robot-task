@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "018ba4d8-75ea-45ea-b130-504acc11e029",
+		"name": "Robot task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "robot-map.txt"
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/init/map0.txt",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"init",
+						"map0.txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Robot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/set?x=1&y=1&dir=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"set"
+					],
+					"query": [
+						{
+							"key": "x",
+							"value": "1"
+						},
+						{
+							"key": "y",
+							"value": "1"
+						},
+						{
+							"key": "dir",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move robot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/move",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"move"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turn robot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/turn?spin=right",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turn"
+					],
+					"query": [
+						{
+							"key": "spin",
+							"value": "right"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
