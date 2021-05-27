@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  robot-task-server:
+    build: ./server
+    container_name: robot-server
+    ports:
+      - 3000:3000
+    volumes:
+      - ./server:/app
